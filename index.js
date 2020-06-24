@@ -684,17 +684,49 @@
 
 //? Recursion to Create a Range of numbers
 
-function rangeOfNumbers (startNum, endNum) {
-  if (startNum === endNum) {
-    return [startNum]
-  } else {
-    const recall = rangeOfNumbers(startNum, endNum - 1)
-    recall.push(endNum)
-    return recall
-  }
-}
+// function rangeOfNumbers (startNum, endNum) {
+//   if (startNum === endNum) {
+//     return [startNum]
+//   } else {
+//     const recall = rangeOfNumbers(startNum, endNum - 1)
+//     recall.push(endNum)
+//     return recall
+//   }
+// }
 
-console.log(rangeOfNumbers(1, 10))
+// console.log(rangeOfNumbers(1, 10))
 
 //! End of Javascript Basics *CONGRATS* ========================================================================================================================
 //? Onto ES6 (easy)
+
+//? Arrow Function w/ Spread OP
+
+// const sum = (...args) => {
+//   return args.reduce((a, b) => a + b, 0)
+// }
+
+//? Use Destructuring Assignment to Assign Variables from Nested Objects
+
+// const LOCAL_FORECAST = {
+//   yesterday: { low: 61, high: 75 },
+//   today: { low: 64, high: 77 },
+//   tomorrow: { low: 68, high: 80 }
+// }
+
+// let {
+//   today: { low: lowToday, high: highToday }
+// } = LOCAL_FORECAST
+
+// console.log(lowToday)
+
+//? Use Destructuring Assignment to Assign Variables from Arrays
+
+// const [, , a, , b] = [1, 2, 3, 4, 5, 6]
+// console.log(a, b) // 3, 5
+
+// let a = 8,
+//   b = 6
+
+// ;[a, b] = [b, a]
+
+// console.log(a, b)
