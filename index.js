@@ -769,22 +769,21 @@
 //? Use getters and setters to Control Access to an Object
 
 class Thermostat {
-  constructor (temperature) {
-    let c = (5 / 9) * (temperature - 32)
-    this.temperature = c
+  constructor (fahrenheit) {
+    this.fahrenheit = fahrenheit
   }
-  get temp () {
-    return this.temperature
+  get temperature () {
+    return (5 / 9) * (this.fahrenheit - 32)
   }
-  set temp (updateTemp) {
-    this.temperature = updateTemp
+  set temperature (celcius) {
+    this.fahrenheit = (celcius * 9.0) / 5 + 32
   }
 }
 
 const thermos = new Thermostat(76)
 let temp = thermos.temperature
-// thermos.temperature = 26
-// temp = thermos.temperature
+thermos.temperature = 26
+temp = thermos.temperature
 
 console.log(temp)
-console.log(thermos)
+console.log(thermos.temperature)
