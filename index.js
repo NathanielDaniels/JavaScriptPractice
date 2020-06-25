@@ -757,13 +757,34 @@
 // console.log(user)
 
 //* Test
-class Vegetable {
-  constructor (name) {
-    this.name = name
+// class Vegetable {
+//   constructor (name) {
+//     this.name = name
+//   }
+// }
+
+// let carrot = new Vegetable('carrot')
+// console.log(carrot)
+
+//? Use getters and setters to Control Access to an Object
+
+class Thermostat {
+  constructor (temperature) {
+    let c = (5 / 9) * (temperature - 32)
+    this.temperature = c
+  }
+  get temp () {
+    return this.temperature
+  }
+  set temp (updateTemp) {
+    this.temperature = updateTemp
   }
 }
 
-let carrot = new Vegetable('carrot')
-console.log(carrot)
+const thermos = new Thermostat(76)
+let temp = thermos.temperature
+// thermos.temperature = 26
+// temp = thermos.temperature
 
-//? Use getters and setters to Control Access to an Object
+console.log(temp)
+console.log(thermos)
