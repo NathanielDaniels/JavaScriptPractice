@@ -730,3 +730,40 @@
 // ;[a, b] = [b, a]
 
 // console.log(a, b)
+
+//? Use class Syntax to Define a Constructor Function
+
+//* ES5
+
+// const UserName = function (firstName, lastName) {
+//   this.firstName = firstName
+//   this.lastName = lastName
+// }
+
+// const user = new UserName('Nathan', 'Daniels')
+
+// console.log(user)
+
+//* ES6
+// class UserName {
+//   constructor (firstName, lastName) {
+//     this.firstName = firstName
+//     this.lastName = lastName
+//   }
+// }
+
+// const user = new UserName('Nathan', 'Daniels')
+
+// console.log(user)
+
+//* Test
+class Vegetable {
+  constructor (name) {
+    this.name = name
+  }
+}
+
+let carrot = new Vegetable('carrot')
+console.log(carrot)
+
+//? Use getters and setters to Control Access to an Object
