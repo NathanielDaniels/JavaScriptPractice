@@ -793,3 +793,10 @@
 
 //! ==================================================================================================
 //! Regular Expressions
+
+//? Using the Test Method
+
+let testStr = 'freeCodeCamp'
+let testRegex = /Code/
+testRegex.test(testStr)
+// Returns true
