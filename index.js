@@ -789,3 +789,7 @@
 // console.log(thermos.temperature)
 
 //? Import/Export files
+//? Promises
+
+//! ==================================================================================================
+//! Regular Expressions
